@@ -26,8 +26,8 @@
 
 ### 1. Клонирование и установка зависимостей
 ```bash
-git clone https://github.com/DragonVlad/[НАЗВАНИЕ_ВАШЕГО_РЕПОЗИТОРИЯ].git
-cd [НАЗВАНИЕ_ВАШЕГО_РЕПОЗИТОРИЯ]
+git clone https://github.com/DragonVlad/Web-Studio-Panel.git
+cd employers
 npm install
 ```
 
