@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# 👥 Система управления персоналом WebStudio Digital
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Это интерактивное веб-приложение (SPA) для внутреннего учета сотрудников, контроля их бонусов и фильтрации по ключевым показателям. 
+Проект сделан на базе учебного макета с доработками: переписан интерфейс под концепцию реальной минской веб-студии (сменил абстрактные шаблоны и имена на реалистичные), исправлены баги в цветовой гамме кнопок и добавлено сохранение данных, чтобы приложение не теряло сотрудников при перезагрузке страницы.
 
-## Available Scripts
+## 🌟 Возможности приложения:
+* **Интерактивное управление списком:** можно добавлять новых сотрудников (с валидацией пустых полей) и удалять их карточки из одним кликом.
+* **Динамическое повышение и премирование:** при клике на сотрудника можно выдать ему премию (появится иконка печенья) или повысить его категорию (имя сотрудника окрасится в оранжевый и появится звезда напротив).
+* **Считать аналитику в реальном времени:** в шапке автоматически обновляются счетчики: общее количество людей в списке и сколько из них сегодня получат премию.
+* **Искать и фильтровать:** реализован «живой» поиск по именам, а также панель быстрых фильтров (показать всех, показать только номинантов на повышение или отсеять тех, у кого зарплата выше 1000$).
+* **Сохранять состояние (LocalStorage):** данные больше не пропадают при перезагрузке страницы (F5). Все изменения на клиенте автоматически синхронизируются с памятью браузера.
 
-In the project directory, you can run:
+## 🛠️ Технический стек:
+* **Библиотека:** React.js (работа с классовыми компонентами, глубокое понимание жизненного цикла).
+* **Управление состоянием (State Management):** Подъем состояния (State Lifting) от дочерних компонентов к родительскому для сквозного поиска и фильтрации.
+* **Стилизация:** Чистый CSS (Flexbox, адаптивные свойства).
+* **Хранение данных:** Браузерное API `localStorage` (синхронизация через методы `componentDidMount` и `componentDidUpdate`).
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💡 Чему я научился на этом проекте:
+1. Архитектуре React-приложений: как правильно делить интерфейс на независимые переиспользуемые компоненты.
+2. Грамотно управлять потоками данных (Props и State) без использования тяжелых стейт-менеджеров.
+3. Оптимизировать производительность: например, переписал стандартный метод `componentDidUpdate`, убрав из него неиспользуемые аргументы (`prevProps`), чтобы код оставался чистым и осознанным.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Как запустить проект локально
 
-### `npm test`
+### 1. Клонирование и установка зависимостей
+```bash
+git clone https://github.com/DragonVlad/[НАЗВАНИЕ_ВАШЕГО_РЕПОЗИТОРИЯ].git
+cd [НАЗВАНИЕ_ВАШЕГО_РЕПОЗИТОРИЯ]
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Запуск приложения
+```bash
+npm start
+```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 3. Просмотр в браузере
+Приложение откроется по адресу `http://localhost:3000/` с поддержкой Hot Reload, а данные сохраняются через `localStorage`.
